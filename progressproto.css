@@ -1,0 +1,76 @@
+  .ui-progressbar {
+  }
+
+  .progresslabel {
+    position: absolute;
+    font-size: 12px;
+  }
+
+
+
+.progressbar {
+	display: inline-block;
+}
+
+.progressbutton {
+	display: inline-block;
+	vertical-align: 6px;
+	width: 25px;
+}
+
+.xyz { text-align: center}
+
+#toolbar {
+	padding: 9px;
+	display: inline-block;
+}
+
+/* support: IE7 */
+*+html #toolbar {
+	display: inline;
+}
+
+table.t1 {
+margin: 1em auto;
+border-collapse: collapse;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.t1 th, .t1 td {
+padding: 4px 8px;
+}
+
+.t1 thead th {
+background: #4f81bd;
+text-align: left;
+font-size: 15px;
+color: #fff;
+}
+
+.t1 tr {
+border-right: 1px solid #95b3d7;
+}
+
+.t1 tbody tr {
+border-bottom: 1px solid #95b3d7;
+border-left:  1px solid #95b3d7;
+}
+
+.t1 tbody th, .t1 tbody tr td {
+border-right: 1px solid #95b3d7;
+}
+
+ul
+{ list-style-type: none; 
+   margin: 0; padding: 0; 
+   float: left;   margin-right: 10px;
+   background: #eee; padding: 5px; width: 250px;
+}
+
+ li 
+ { margin: 5px; padding: 5px; 
+   font-size: 1.2em; 
+   width: 240px; 
+   cursor: move;
+ }
+ 

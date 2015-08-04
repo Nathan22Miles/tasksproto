@@ -1,0 +1,12 @@
+jQuery
+
+.text()
+.addClass()
+.attr()
+
+$(tag.class)
+$(#id)
+.find('li:last')
+.appendTo('body')
+
+$(".task").get(0)

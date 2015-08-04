@@ -1,0 +1,67 @@
+<template name="main">
+	<section class="container-fluid">
+	    <div class="row">
+		    <div id="toolbar" class="ui-widget-header ui-corner-all">
+	            <select id="task-filter">
+                    <option value="0" selected>My Tasks</option>
+                    <option value="1">All Tasks</option>
+                </select>
+	            <select id="scope-filter" class="filter">
+                    <option value="0" selected>LUK</option>
+                    <option value="1">GAL</option>
+                    <option value="2">1JN</option>
+                    <option value="3">All Books</option>
+                    <option value="4">---</option>
+                    <option value="5">Current Book</option>
+                    <option value="6">Current Chapter</option>
+                </select>
+	        </div>
+			<div class="span12">
+				<table class="t1">
+				  <thead>
+				    {{#if myTasks}}
+				      <tr><th>Stage</th><th>Task</th><th>Assignment</th><th>Status</th></tr>
+                    {{else}}
+                    {{/if}}
+				  </thead>
+				  <tbody>
+			        {{#each tasks}}
+			          {{> task}}
+			        {{/each}}
+			      </tbody>
+				</table>
+			</div>
+		</div>
+	</section>
+</template>
+
+<template name="task">
+  <tr>
+    {{#if myTasks}}
+      <td>{{stage}}</td> 
+      <td><a>{{name}}</a></td>
+      <td>{{book}} 1-{{chapters}}</td>
+      <td>
+        {{#if message}}
+          <a>{{message}}</a>
+        {{else}}
+           {{#if completed}}
+             <button class="progressbutton">-</button>Completed
+           {{else}}
+           <div class="xyz">
+             <button class="progressbutton">-</button>
+             <div id="progress_{{id}}" class="progressbar">
+               <span id="progresslabel_{{id}}" class="progresslabel"></span>
+             </div>        
+             <button class="progressbutton">+</button>
+           </div>
+           {{/if}}
+         {{/if}}
+      </td>
+    {{else}}
+      <td>BOB</td> 
+      <td>{{assignedTo}}</td>
+    {{/if}}
+  </tr>
+</template>
+
